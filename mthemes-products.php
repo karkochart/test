@@ -53,10 +53,10 @@
 			$(this).addClass('currmenu');
 			
 			if($(this).attr('id') == 'winesp'){
-				$(".verticalmenu").html('<ul class="winesp"><li text="Fruit Vodka">Fru<span class="letter">i</span>t Vodka</li><li text="White Voskehat">Wh<span class="letter">i</span>te Voskehat</li><li text="White Kangun">Wh<span class="letter">i</span>te Kangun</li><li text="White Rkatsiteli">Wh<span class="letter">i</span>te Rkats<span class="letter">i</span>tel<span class="letter">i</span></li><li text="White Muscat">Wh<span class="letter">i</span>te Muscat</li><li text="Fruit Brandy">Fru<span class="letter">i</span>t Brandy</li><li text="Brandy">Brandy</li><li text="Exclusive Brandy">Exclus<span class="letter">i</span>ve Brandy</li><li text="Rose Areni">Rose Aren<span class="letter">i</span></li><li text="Rose Kakhet">Rose Kakhet</li><li text="Rose Rkatsiteli">Rose Rkats<span class="letter">i</span>tel<span class="letter">i</span></li><li text="Rose Areni Noir">Rose Aren<span class="letter">i</span> No<span class="letter">i</span>r</li><li text="Red Areni">Red Aren<span class="letter">i</span></li><li text="Red Kakhet">Red Kakhet</li><li text="Red Khndoghni">Red Khndoghn<span class="letter">i</span></li><li text="Red merlot">Red merlot</li><li text="Red Cabernet Sauvignon">Red Cabernet Sauv<span class="letter">i</span>gnon</li><li text="Red Haghtanak">Red Haghtanak</li><li text="Red Areni Noir">Red Aren<span class="letter">i</span> No<span class="letter">i</span>r</li><li text="Fruit Wine">Fru<span class="letter">i</span>t W<span class="letter">i</span>ne</li></ul>');
+				$(".verticalmenu").html('<ul class="winesp"><li text="Wine">Wine</li><li text="Brandy">Brandy</li><li text="Vodka">Vodka</li></ul>');
 				$(".productwrap").css("background-image", "url(/wp-content/themes/yanlegends/bokal-main1.png)").css('background-size', '100% 100%').attr('id', 'owine');
-				$("#owine .topproduct").css('margin-top', '11px').css('height', '169px');
-				$(".winesp li").css('margin-top', '-220px');
+				$("#owine .topproduct").css('margin-top', '11px').css('height', '350px');
+				$(".winesp li").css('margin-top', '-389px');
 			}
 			
 			if($(this).attr('id') == 'jamsp'){
@@ -109,12 +109,13 @@
 			if($(this).attr('id') == 'winespch'){
 				$(".verticalmenu").html('<ul class="winespch"><li text="Fruit Vodka">水果伏特加</li><li text="White Voskehat">白 <span class="pink">Voskehat</span></li><li text="White Kangun">白 <span class="pink">Kangun</span></li><li text="White Rkatsiteli">白 <span class="pink">Rkats<span class="letter">i</span>tel<span class="letter">i</span></span></li><li text="White Muscat">白 <span class="pink">Muscat</span></li><li text="Fruit Brandy">水果白兰地</li><li text="Brandy">白兰地</li><li text="Exclusive Brandy">独特白兰地</li><li text="Rose Areni">玫瑰红 <span class="pink">Aren<span class="letter">i</span></span></li><li text="Rose Kakhet">玫瑰红 <span class="pink">Kakhet</span></li><li text="Rose Rkatsiteli">玫瑰红 <span class="pink">Rkats<span class="letter">i</span>tel<span class="letter">i</span></span></li><li text="Rose Areni Noir">玫瑰红 <span class="pink">Aren<span class="letter">i</span> No<span class="letter">i</span>r</span></li><li text="Red Areni">红 <span class="pink">Aren<span class="letter">i</span></span></li><li text="Red Kakhet">红 <span class="pink">Kakhet</span></li><li text="Red Khndoghni">红 <span class="pink">Khndoghn<span class="letter">i</span></span></li><li text="Red merlot">红 <span class="pink">merlot</span></li><li text="Red Cabernet Sauvignon">红 <span class="pink">Cabernet Sauv<span class="letter">i</span>gnon</span></li><li text="Red Haghtanak">红 <span class="pink">Haghtanak</span></li><li text="Red Areni Noir">红 <span class="pink">Aren<span class="letter">i</span> No<span class="letter">i</span>r</span></li><li text="Fruit Wine">水果酒</li></ul>');
 				$(".productwrap").css("background-image", "url(/wp-content/themes/yanlegends/bokalmainch.png)").css('background-size', '100% 100%').attr('id', 'owine');
-				$("#owine .topproduct").css('margin-top', '11px').css('height', '169px');
-				$(".winespch li").css('margin-top', '-220px');
+				$("#owine .topproduct").css('margin-top', '11px').css('height', '350px');
+				$(".winespch li").css('margin-top', '-389px');
 			}
 		})
 		
 		$(document).on('click', ".verticalmenu li", function(){
+			console.log("***************** 0 ****************");
 			var main = $(this).attr('text');
 			
 			$(".verticalmenu li").css('color', 'white');
@@ -134,10 +135,12 @@
 				if($("#gallery-1").find('.gallery-item:visible').length < 5){
 					console.log($("#gallery-1").find('.gallery-item:visible').length);
 					$("#gallery-1 .controls").addClass('hidcon');
+					console.log("***************** 1 ****************");
 				}
 				else{
 					console.log($("#gallery-1").find('.gallery-item:visible').length);
 					$("#gallery-1 .controls").removeClass('hidcon');
+					console.log("***************** 2 ****************");
 				}
 			//}, 500);
 		})
@@ -150,8 +153,8 @@
 			$("#water, #waterch").trigger('click');
 		}
 		if($.cookie('eighteen') == 'true'){
-			$(".topproduct").css('margin-top', '11px').css('height', '169px');
-			$(".winesp li, .winespch li").css("margin-top", "-220px");
+			$(".topproduct").css('margin-top', '11px').css('height', '350px');
+			$(".winesp li, .winespch li").css("margin-top", "-389px");
 		}
 		$(document).on('click', "#winesp, #winespch", function(e){
 			if($.cookie('eighteen') != 'true'){
@@ -165,8 +168,8 @@
 			$('.verticalmenu li').css('pointer-events', 'initial');
 			$(".winesp li, .winespch li").eq(0).trigger('click');
 			$(this).parent().parent().fadeOut();
-			$(".topproduct").css('margin-top', '11px').css('height', '169px');
-			$(".winesp li, .winespch li").css("margin-top", "-220px");
+			$(".topproduct").css('margin-top', '11px').css('height', '350px');
+			$(".winesp li, .winespch li").css("margin-top", "-389px");
 		})
 		$(document).on('click',".no",function(){
 			$.cookie('eighteen', 'false');
@@ -189,11 +192,11 @@
 			else{
 				if($(this).attr('cats') == ',Preserves & Dried Fruit,'){
 				$(".imgdesc").css('background-image', 'initial');
-				$(".imgdesc").html("<div class='bigimg'><img src='"+$(this).attr('full')+"' width='400'></div><div class='desc' style='margin-left: -5%'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
+				$(".imgdesc").html("<div class='bigimg'><img class='zoom-img' src='"+$(this).attr('full')+"' data-zoom-image='"+$(this).attr('full')+"' width='300'></div><div class='desc' style='margin-left: -5%'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
 			}
 			else{
 				$(".imgdesc").css('background-image', 'initial');
-				$(".imgdesc").html("<div class='bigimg'><img src='"+$(this).attr('full')+"' width='400'></div><div class='desc'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
+				$(".imgdesc").html("<div class='bigimg'><img class='zoom-img' src='"+$(this).attr('full')+"' data-zoom-image='"+$(this).attr('full')+"' width='300'></div><div class='desc'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
 				}
 			}
 			
@@ -223,7 +226,7 @@
 				$(this).css('margin-top', $(this).parent().height()/2 -16);
 			})
 			if($(this).attr('cats') == 'Preserves & Dried Fruit,'){
-				$(".simslider img").css('height', '180px').css('margin-top', '-14px');
+				$(".simslider img").css('height', '300px').css('margin-top', '-14px');
 			}
 			
 			if($(".simslider").find('.gallery-item:visible').length < 5){
@@ -242,17 +245,17 @@
 				
 			if($(this).attr('cats') == ',Preserves & Dried Fruit,'){
 				$(".imgdesc").css('background-image', 'initial');
-				$(".imgdesc").html("<div class='bigimg'><img src='"+$(this).attr('full')+"' width='400'></div><div class='desc' style='margin-left: -5%'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
+				$(".imgdesc").html("<div class='bigimg'><img class='zoom-img' src='"+$(this).attr('full')+"' data-zoom-image='"+$(this).attr('full')+"' width='300'></div><div class='desc' style='margin-left: -5%'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
 			}
 			else{
 				$(".imgdesc").css('background-image', 'initial');
-				$(".imgdesc").html("<div class='bigimg'><img src='"+$(this).attr('full')+"' width='400'></div><div class='desc'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
+				$(".imgdesc").html("<div class='bigimg'><img class='zoom-img' src='"+$(this).attr('full')+"' data-zoom-image='"+$(this).attr('full')+"' width='300'></div><div class='desc'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
 			}
 			}
 		})
 		
 		$(document).on('click', "#a856, #a854", function(e){
-			$(".imgdesc").html("<div class='bigimg2'><img src='"+$(this).attr('full')+"' width='400'></div><div class='desc2'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
+			$(".imgdesc").html("<div class='bigimg2'><img class='zoom-img' src='"+$(this).attr('full')+"' data-zoom-image='"+$(this).attr('full')+"' width='300'></div><div class='desc2'><h3 class='redh4'>"+$(this).attr('firm').replace(/(^,)|(,$)/g, "")+"</h3><h4>"+$(this).attr('caption')+"</h4>"+$(this).find('dd').html()+"</div>");
 			e.preventDefault();
 			return false;
 		})
@@ -390,7 +393,11 @@ Please confirm.</h1></div>
 	                	$full = $meta['sizes']['full']['url']; ?>
 						<dl class='gallery-item' cats='<?php echo $cats; ?>' firm='<?php echo $firm; ?>' color='<?php echo $col; ?>' full='<?php echo $full; ?>' id='<?php echo 'a'.$meta['id']; ?>' caption='<?php if($post->post_name == 'ourproducts'){echo($meta['caption']);}elseif($post->post_name == 'our-productschin'){echo(get_post_meta($im, "_chintitle", true));} ?>' <?php if(get_post_meta($im, "_credit", true) && $post->post_name == 'ourproducts'){echo "background='".get_post_meta($im, "_credit", true)."'";}elseif(get_post_meta($im, "_credit", true) && $post->post_name == 'our-productschin'){echo "background='".get_post_meta($im, "_chincredit", true)."'";} ?>>
 							<dt class='gallery-icon landscape'>
-								<img height="140" src="<?php echo($src[0]); ?>" class="attachment-thumbnail" alt="backpacks1" aria-describedby="gallery-1-<?php echo $im; ?>" />
+							<?php 
+								$mySrc = $src[0];
+								$mySrc = str_replace("-150x150", "-300x300", $mySrc);
+							?> 
+								<img height="300" src="<?php echo($mySrc); ?>" class="attachment-thumbnail" alt="backpacks1" aria-describedby="gallery-1-<?php echo $im; ?>" />
 							</dt>
 							<dd class='wp-caption-text gallery-caption' id='gallery-1-<?php echo $im; ?>'>
 							<?php  if($post->post_name == 'ourproducts'){echo($meta['description']);}
@@ -406,26 +413,9 @@ Please confirm.</h1></div>
 					<?php if($post->post_name == 'ourproducts'): ?>
 					<div class="verticalmenu">
                 	<ul class="winesp">
-	                	<li text='Fruit Vodka'>Fru<span class="letter">i</span>t Vodka</li>
-	                	<li text='White Voskehat'>Wh<span class="letter">i</span>te Voskehat</li>
-	                	<li text='White Kangun'>Wh<span class="letter">i</span>te Kangun</li>
-	                	<li text='White Rkatsiteli'>Wh<span class="letter">i</span>te Rkats<span class="letter">i</span>tel<span class="letter">i</span></li>
-	                	<li text='White Muscat'>Wh<span class="letter">i</span>te Muscat</li>
-	                	<li text='Fruit Brandy'>Fru<span class="letter">i</span>t Brandy</li>
+	                	<li text='Wine'>Wine</li> 
 	                	<li text='Brandy'>Brandy</li>
-	                	<li text='Exclusive Brandy'>Exclus<span class="letter">i</span>ve Brandy</li>
-	                	<li text='Rose Areni'>Rose Aren<span class="letter">i</span></li>
-	                	<li text='Rose Kakhet'>Rose Kakhet</li>
-	                	<li text='Rose Rkatsiteli'>Rose Rkats<span class="letter">i</span>tel<span class="letter">i</span></li>
-	                	<li text='Rose Areni Noir'>Rose Aren<span class="letter">i</span> No<span class="letter">i</span>r</li>
-	                	<li text='Red Areni'>Red Aren<span class="letter">i</span></li>
-	                	<li text='Red Kakhet'>Red Kakhet</li>
-	                	<li text='Red Khndoghni'>Red Khndoghn<span class="letter">i</span></li>
-	                	<li text='Red merlot'>Red merlot</li>
-	                	<li text='Red Cabernet Sauvignon'>Red Cabernet Sauv<span class="letter">i</span>gnon</li>
-	                	<li text='Red Haghtanak'>Red Haghtanak</li>
-	                	<li text='Red Areni Noir'>Red Aren<span class="letter">i</span> No<span class="letter">i</span>r</li>
-	                	<li text='Fruit Wine'>Fru<span class="letter">i</span>t W<span class="letter">i</span>ne</li>
+	                	<li text='Vodka'>Vodka</li>
                 	</ul>
                 	</div>
                 </div>
@@ -439,27 +429,10 @@ Please confirm.</h1></div>
 					</ul>
 					<?php elseif($post->post_name == 'our-productschin'): ?>
 					<div class="verticalmenu chin">
-					<ul class="winespch">
-	                	<li text='Fruit Vodka'>水果伏特加</li>
-	                	<li text='White Voskehat'>白 <span class="pink">Voskehat</span></li>
-	                	<li text='White Kangun'>白 <span class="pink">Kangun</span></li>
-	                	<li text='White Rkatsiteli'>白 <span class="pink">Rkats<span class="letter">i</span>tel<span class="letter">i</span></span></li>
-	                	<li text='White Muscat'>白 <span class="pink">Muscat</span></li>
-	                	<li text='Fruit Brandy'>水果白兰地</li>
+					<ul class="winespch winesp ">	                	
+                		<li text='Wine'>红酒</li> 
 	                	<li text='Brandy'>白兰地</li>
-	                	<li text='Exclusive Brandy'>独特白兰地</li>
-	                	<li text='Rose Areni'>玫瑰红 <span class="pink">Aren<span class="letter">i</span></span></li>
-	                	<li text='Rose Kakhet'>玫瑰红 <span class="pink">Kakhet</span></li>
-	                	<li text='Rose Rkatsiteli'>玫瑰红 <span class="pink">Rkats<span class="letter">i</span>tel<span class="letter">i</span></span></li>
-	                	<li text='Rose Areni Noir'>玫瑰红 <span class="pink">Aren<span class="letter">i</span> No<span class="letter">i</span>r</span></li>
-	                	<li text='Red Areni'>红 <span class="pink">Aren<span class="letter">i</span></span></li>
-	                	<li text='Red Kakhet'>红 <span class="pink">Kakhet</span></li>
-	                	<li text='Red Khndoghni'>红 <span class="pink">Khndoghn<span class="letter">i</span></span></li>
-	                	<li text='Red merlot'>红 <span class="pink">merlot</span></li>
-	                	<li text='Red Cabernet Sauvignon'>红 <span class="pink">Cabernet Sauv<span class="letter">i</span>gnon</span></li>
-	                	<li text='Red Haghtanak'>红 <span class="pink">Haghtanak</span></li>
-	                	<li text='Red Areni Noir'>红 <span class="pink">Aren<span class="letter">i</span> No<span class="letter">i</span>r</span></li>
-	                	<li text='Fruit Wine'>水果酒</li>
+	                	<li text='Vodka'>伏特加酒</li>
                 	</ul>
                 	</div>
                 </div>
@@ -484,8 +457,20 @@ Please confirm.</h1></div>
             </div>
         </div>
     </div>
-	
-	
-	
     <?php endif; ?>
+	<script src='<?php echo get_template_directory_uri(); ?>/elevatezoom/jquery.elevatezoom.js'></script>
+	<script>
+		jQuery(document).ready(function(){
+			var myInterval = setInterval(function(){
+				jQuery('.zoom-img').elevateZoom({
+					zoomWindowPosition: 1,
+					zoomWindowWidth:300, 
+					borderSize: 1, 
+					easing:false
+				});
+				// jQuery(".hidden").append("<div class='next-bg'></div><div class='prev-bg'></div>");
+				// clearInterval(myInterval); 
+			}, 1000);
+		});
+</script>
 </div>
