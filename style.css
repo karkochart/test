@@ -1023,7 +1023,7 @@ h4 {
 	margin-left: 1.8%!important;
 }
 .verticalmenu li{
-  transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
   position: relative;
   height: 310px;
   float: left;
@@ -1043,17 +1043,6 @@ h4 {
   color: white;
   font-weight: bold;
   padding-bottom: 35px;
-}
-.verticalmenu .winesp li{
-      height: 20px;
-    width: 43.33%;
-    word-wrap: normal;
-    line-height: 20px;
-    padding: 5px 0;
-    margin: 0;
-    font-size: 19px;
-    font-weight: normal;
-    margin-left: -11px;
 }
 .verticalmenu li span{
 	transition: .3s ease-in-out;
@@ -1076,7 +1065,7 @@ h4 {
 }
 .winesp li, .winespch li {
 	margin-top: -270px;
-	padding-top: 20px;
+	padding-top: 220px;
 }
 
 .water li {
@@ -1190,11 +1179,11 @@ h4 {
 }
 .next{
 	background-position: 53px 0px;
-	right: 5px;
+	right: 15px;
 	float: right;
 }
 .prev{
-	left: 5px;
+	left: 15px;
 	float: left;
 }
 
@@ -1971,10 +1960,7 @@ aside article a.button { float:left; }
 	display: none!important;
 }
 #owine #gallery-1{
-	height: auto;
-  margin-top: 60px;
-  padding-top: 20px;
-  width: 600px;
+	height: 140px;
 }
 #owater #gallery-1{
 	height: 117px;
@@ -3854,15 +3840,4 @@ form div.wpcf7-response-output.wpcf7-mail-sent-ok {
     margin-bottom:1px;
   }
   #section-half-page #half-page-container .half-page-column .half-page-column-content { padding:48px; }
-}
-.gallery-icon{
-  position: relative;
-  height: 300px;
-}
-.gallery-icon img{
-  position: absolute;
-  left: -75px; 
-}
-.zoomContainer{
-    z-index: 9;
 }
